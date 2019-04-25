@@ -4,7 +4,7 @@
   "description": "Personal website",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel serve src/index.html"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/javierdwd/jv_code/issues"
   },
-  "homepage": "https://github.com/javierdwd/jv_code#readme"
+  "homepage": "https://github.com/javierdwd/jv_code#readme",
+  "dependencies": {
+    "parcel-bundler": "1.12.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "9.5.1",
+    "postcss-modules": "1.4.1"
+  }
 }
