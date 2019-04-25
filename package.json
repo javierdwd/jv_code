@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "autoprefixer": "9.5.1",
-    "postcss-modules": "1.4.1"
+    "postcss-nested": "4.1.2",
+    "posthtml-modules": "0.4.2"
   }
 }

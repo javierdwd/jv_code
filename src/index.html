@@ -18,168 +18,30 @@
   <meta property="og:description" content="Javier's personal website" />
   <meta property="og:site_name" content="javier's codes" />
 
-  <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
+  <link rel="stylesheet" href="styles/main.css">
   <title>javier's codes</title>
-
-  <style>
-
-    * { box-sizing: border-box; }
-
-    html,
-    body {
-      background-color: #0755A3;
-      border: 0;
-      margin: 0;
-      padding: 0;
-    }
-    html {
-      font-size: 16px;
-    }
-    body {
-      --brand-color: #0755A3;
-      --brand-color-darken: #032649;
-
-      font-family: 'Karla', sans-serif;
-      height: 100vh;
-    }
-    #page-wrapper {
-      background: transparent url("images/page_bg.jpg") no-repeat;
-      background-size: cover;
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      justify-content: center;
-      position: relative;
-      width: 100%;
-      z-index: 10;
-    }
-    .bg-aux {
-      background-color: var(--brand-color);
-      background-image: linear-gradient(to bottom, var(--brand-color), var(--brand-color-darken));
-      bottom: 0;
-      display: block;
-      left: 0;
-      mix-blend-mode: multiply;
-      position: absolute;
-      opacity: 0.6;
-      right: 0;
-      top: 0;
-      z-index: 1;
-    }
-
-    /* Content */
-    #content-wrapper {
-      position: relative;
-      text-align: center;
-      z-index: 10;
-    }
-    .avatar {
-      border-radius: 50%;
-      border: 6px solid white;
-      height: 250px;
-      width: 250px;
-    }
-    .social {
-      display: inline-block;
-      text-decoration: none !important;
-      vertical-align: top;
-      margin-top: 1.8rem;
-      cursor: pointer;
-    }
-    .social .icon,
-    .social .icon svg {
-      display: inline-block;
-      height: 25px;
-      width: 25px;
-    }
-    .social .icon {
-      vertical-align: middle;
-    }
-    .social .profile-name {
-      background-color: transparent;
-      color: white;
-      display: inline-block;
-      font-size: 1.3rem;
-      left: 6px;
-      line-height: 1.4;
-      padding: 0 .6rem;
-      position: relative;
-      transition: all .4s ease;
-      vertical-align: middle;
-    }
-    .social:hover .profile-name {
-      animation-duration: .8s;
-      animation-iteration-count: infinite;
-      animation-name: shadow-hover;
-      background-color: white;
-      color: transparent;
-    }
-    @keyframes shadow-hover {
-      0% {  text-shadow: -6px 0 0 #032649; }
-      15% {  text-shadow: 6px 0 0 #032649; }
-      30% { text-shadow: -6px 0 0 #032649; }
-      45% { text-shadow: 6px 0 0 #032649; }
-      60% { text-shadow: 0px 0 0 #032649; }
-      100% { text-shadow: 0px 0 0 #032649; }
-    }
-  </style>
 </head>
 
 <body>
-  <div id="page-wrapper">
-    <div class="bg-aux"></div>
+  <div class="l-page-wrapper">
+    <main class="l-content">
+      <section class="l-section--fullsize l-section--center l-section--column l-profile">
+        <img src="images/avatar.jpg" class="c-avatar"  alt="Javier - Avatar">
 
-    <main id="content-wrapper">
-      <img src="images/avatar.jpg" class="avatar" data-final-src="avatar.jpg" alt="Javier - Avatar">
-
-      <br>
-
-      <a href="https://www.linkedin.com/in/javier-van-breedan/" class="social">
-          <span class="icon">
-            <svg version="1.1" id="Capa_1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 112.196 112.196"
-                  style="enable-background:new 0 0 112.196 112.196;"
-                  xml:space="preserve">
-              <circle style="fill:#007AB9;"
-                    cx="56.098"
-                    cy="56.097"
-                    r="56.098"></circle>
-              <g>
-                <path style="fill:#F1F2F2;" d="M89.616,60.611v23.128H76.207V62.161c0-5.418-1.936-9.118-6.791-9.118
-                  c-3.705,0-5.906,2.491-6.878,4.903c-0.353,0.862-0.444,2.059-0.444,3.268v22.524H48.684c0,0,0.18-36.546,0-40.329h13.411v5.715
-                  c-0.027,0.045-0.065,0.089-0.089,0.132h0.089v-0.132c1.782-2.742,4.96-6.662,12.085-6.662
-                  C83.002,42.462,89.616,48.226,89.616,60.611L89.616,60.611z M34.656,23.969c-4.587,0-7.588,3.011-7.588,6.967
-                  c0,3.872,2.914,6.97,7.412,6.97h0.087c4.677,0,7.585-3.098,7.585-6.97C42.063,26.98,39.244,23.969,34.656,23.969L34.656,23.969z
-                    M27.865,83.739H41.27V43.409H27.865V83.739z"></path>
-              </g>
-            </svg>
-          </span>
-          <span class="profile-name">javier</span>
-      </a>
-
-      <br>
-
-      <a href="https://github.com/javierdwd" class="social">
-        <span class="icon">
-          <svg version="1.1"
-                id="Capa_1"
+        <div class="l-profile__link">
+          <a href="https://github.com/javierdwd/" class="c-link c-link--bigger">
+            <span class="c-link__icon">
+              <svg version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 x="0px"
                 y="0px"
-                width="438.549px"
-                height="438.549px"
                 viewBox="0 0 438.549 438.549"
                 style="enable-background:new 0 0 438.549 438.549;"
                 xml:space="preserve">
-              <g>
-                <path style="fill:#F1F2F2;" d="M409.132,114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736,15.166,259.057,5.365,219.271,5.365
+                <g>
+                  <path style="fill:#F1F2F2;" d="M409.132,114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736,15.166,259.057,5.365,219.271,5.365
                   c-39.781,0-76.472,9.804-110.063,29.408c-33.596,19.605-60.192,46.204-79.8,79.8C9.803,148.168,0,184.854,0,224.63
                   c0,47.78,13.94,90.745,41.827,128.906c27.884,38.164,63.906,64.572,108.063,79.227c5.14,0.954,8.945,0.283,11.419-1.996
                   c2.475-2.282,3.711-5.14,3.711-8.562c0-0.571-0.049-5.708-0.144-15.417c-0.098-9.709-0.144-18.179-0.144-25.406l-6.567,1.136
@@ -199,11 +61,41 @@
                   c9.894,8.562,14.842,22.077,14.842,40.539v60.237c0,3.422,1.19,6.279,3.572,8.562c2.379,2.279,6.136,2.95,11.276,1.995
                   c44.163-14.653,80.185-41.062,108.068-79.226c27.88-38.161,41.825-81.126,41.825-128.906
                   C438.536,184.851,428.728,148.168,409.132,114.573z"></path>
-              </g>
-          </svg>
-        </span>
-        <span class="profile-name">javierdwd</span>
-      </a>
+                </g>
+              </svg>
+            </span>
+            <span class="c-link__animated-text">javier</span>
+          </a>
+        </div>
+        <div class="l-profile__link">
+          <a href="https://www.linkedin.com/in/javier-van-breedan/" class="c-link c-link--bigger">
+            <span class="c-link__icon">
+              <svg version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 112.196 112.196"
+                style="enable-background:new 0 0 112.196 112.196;"
+                xml:space="preserve">
+                <circle style="fill:#007AB9;"
+                cx="56.098"
+                cy="56.097"
+                r="56.098"></circle>
+                <g>
+                  <path style="fill:#F1F2F2;" d="M89.616,60.611v23.128H76.207V62.161c0-5.418-1.936-9.118-6.791-9.118
+                  c-3.705,0-5.906,2.491-6.878,4.903c-0.353,0.862-0.444,2.059-0.444,3.268v22.524H48.684c0,0,0.18-36.546,0-40.329h13.411v5.715
+                  c-0.027,0.045-0.065,0.089-0.089,0.132h0.089v-0.132c1.782-2.742,4.96-6.662,12.085-6.662
+                  C83.002,42.462,89.616,48.226,89.616,60.611L89.616,60.611z M34.656,23.969c-4.587,0-7.588,3.011-7.588,6.967
+                  c0,3.872,2.914,6.97,7.412,6.97h0.087c4.677,0,7.585-3.098,7.585-6.97C42.063,26.98,39.244,23.969,34.656,23.969L34.656,23.969z
+                  M27.865,83.739H41.27V43.409H27.865V83.739z"></path>
+                </g>
+              </svg>
+            </span>
+            <span class="c-link__animated-text">javierdwd</span>
+          </a>
+        </div>
+      </section><!-- ./l-profile -->
     </main>
   </div>
 

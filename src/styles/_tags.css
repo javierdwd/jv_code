@@ -1,0 +1,23 @@
+* { box-sizing: border-box; }
+
+html,
+body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--brand-color);
+  font-family: 'Karla', sans-serif;
+  font-size: 1.6rem;}
+a {
+  color: white;
+  outline-color: var(--orange);
+  text-decoration: none !important;
+  transition: color .2s;
+
+  &:hover,
+  &:active {
+    color: var(--orange-lighten);
+  }
+}

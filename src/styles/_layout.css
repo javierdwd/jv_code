@@ -1,0 +1,34 @@
+/* Contenedor General (Justo dentro del Body). */
+.l-page-wrapper {
+  &::before {
+    background: transparent url("../images/page_bg--colored.jpg") no-repeat center center;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+  }
+}
+
+/* Contenedor del contenido principal. Se pueden sumar .l-header o .l-footer. */
+.l-content {
+  position: relative;
+  z-index: 10;
+}
+
+/* Contenedor de secciones. */
+.l-section {
+  &--fullsize {
+    min-height: 100vh;
+    width: 100%;
+  }
+  &--center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  &--column {
+    flex-direction: column;
+  }
+}

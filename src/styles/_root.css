@@ -1,0 +1,13 @@
+:root {
+  font-size: 62.5%;
+
+  --brand-color: #0755A3;
+  --brand-color-darken: #033565;
+  --brand-color-lighten: #3B82C8;
+  --yellow: #FBC000;
+  --yellow-lighten: #FFD13C;
+  --yellow-darken: #C99A00;
+  --orange: #FB5100;
+  --orange-lighten: #FF7C3C;
+  --orange-darken: #C94100;
+}

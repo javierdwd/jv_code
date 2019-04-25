@@ -1,0 +1,44 @@
+.c-avatar {
+  border-radius: 50%;
+  border: 6px solid white;
+  height: 250px;
+  width: 250px;
+}
+
+.c-link {
+  &__icon {
+    display: inline-block;
+    height: 1.1em;
+    vertical-align: middle;
+    width: 1.1em;
+  }
+  &__animated-text {
+    background-color: transparent;
+    display: inline-block;
+    line-height: 1.4;
+    padding: 0 .6em;
+    position: relative;
+    transition: all .4s ease;
+    vertical-align: middle;
+
+    &:hover {
+      animation-duration: .8s;
+      animation-iteration-count: infinite;
+      animation-name: animation__shadow-hover;
+      background-color: white;
+      color: transparent;
+    }
+  }
+
+  &__icon + &__animated-text {
+    left: 0.1em;
+  }
+
+  &--bigger {
+    font-size: 2.1rem;
+  }
+  &--vertical-list {
+    display: inline-block;
+    margin: 1.6em;
+  }
+}
