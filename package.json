@@ -1,0 +1,19 @@
+{
+  "name": "jv_code",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javierdwd/jv_code.git"
+  },
+  "author": "Javier Van Breedan <javierdwd@gmail.com> (https://github.com/javierdwd/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/javierdwd/jv_code/issues"
+  },
+  "homepage": "https://github.com/javierdwd/jv_code#readme"
+}
