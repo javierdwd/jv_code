@@ -4,7 +4,8 @@
   "description": "Personal website",
   "main": "index.html",
   "scripts": {
-    "dev": "parcel serve src/index.html"
+    "dev": "parcel serve src/index.html",
+    "build": "parcel build src/index.html"
   },
   "repository": {
     "type": "git",
