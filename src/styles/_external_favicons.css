@@ -1,0 +1,15 @@
+*[href^="https://css-tricks.com"]::before {
+  background-image: url(https://css-tricks.com/apple-touch-icon.png) !important;
+}
+*[href^="https://www.smashingmagazine.com"]::before {
+  background-image: url(https://www.smashingmagazine.com/images/favicon/favicon.png) !important;
+}
+*[href^="https://overreacted.io"]::before {
+  background-image: url(https://overreacted.io/icons/icon-48x48.png) !important;
+}
+*[href^="https://www.youtube.com"]::before {
+  background-image: url(/images/icons/youtube.png) !important;
+}
+*[href^="https://nodesource.com"]::before {
+  background-image: url(https://nodesource.com/assets/favicon.ico) !important;
+}
