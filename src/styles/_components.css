@@ -6,6 +6,9 @@
 }
 
 .c-link {
+  border: 0;
+  background-color: transparent;
+
   &__icon {
     display: inline-block;
     height: 1.1em;
@@ -40,5 +43,107 @@
   &--vertical-list {
     display: inline-block;
     margin: 1.6em;
+  }
+}
+
+.c-btn {
+  --transition-time: .5s;
+
+  background-color: white;
+  border: 0;
+  border-radius: 0.4rem;
+  color: var(--brand-color);
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4em;
+  font-weight: 500;
+  height: 2em;
+  line-height: 1;
+  overflow: hidden;
+  padding: 0 .8em;
+  transition: all var(--transition-time);
+
+  &:disabled {
+    height: 0;
+    margin-top: 0;
+    opacity: 0;
+  }
+
+  &--block {
+    width: 100%;
+  }
+  &--animated {
+    &:hover {
+      animation-duration: .8s;
+      animation-iteration-count: infinite;
+      animation-name: animation__shadow-hover;
+      background-color: white;
+      color: transparent;
+    }
+  }
+}
+
+.c-good-links {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 0.6rem solid var(--brand-color-alpha50);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  max-width: 800px;
+  min-width: 320px;
+  padding: 2.6rem 3rem 2rem;
+  border-top: transparent;
+  width: 80%;
+
+  @media (min-width: 600px) {
+    padding-top: 2.4rem;
+    font-size: 1.2rem;
+  }
+
+  &__link {
+    color: white;
+    font-size: 1.8em;
+    font-weight: 300;
+    font-weight: 700;
+    line-height: 1.4;
+    position: relative;
+    text-align: center;
+    text-shadow: 0.5rem 1.2rem 0 rgba(0, 0, 0, 1);
+
+    &::before {
+      background-color: white;
+      content: "";
+      display: none;
+      height: .5rem;
+      left: 50%;
+      position: absolute;
+      top: -1.8rem;
+      transform: translateX(-50%);
+      width: .5rem;
+    }
+    &:hover {
+      color: var(--yellow);
+    }
+
+    @media (min-width: 600px) {
+      text-align: left;
+
+      &::before {
+        left: 0;
+        transform: none;
+      }
+    }
+  }
+  &__link[style*="display: block"] + &__link[style*="display: block"] {
+    margin-top: 3.6rem;
+
+    &::before {
+      display: block;
+    }
+  }
+  &__button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.8em;
+    max-width: 200px;
   }
 }
