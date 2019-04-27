@@ -1,13 +1,22 @@
 /* Contenedor General (Justo dentro del Body). */
 .l-page-wrapper {
+  background-color: black;
+
   &::before {
-    background: transparent url("../images/page_bg--colored.jpg") no-repeat center center;
+    background: transparent url("/images/page_bg--colored.jpg") no-repeat center center;
     background-size: cover;
     content: "";
     display: block;
     height: 100%;
     position: fixed;
+    transition: opacity 1s ease;
     width: 100%;
+  }
+
+  &--darken-bg {
+    &::before {
+      opacity: 0.6;
+    }
   }
 }
 
