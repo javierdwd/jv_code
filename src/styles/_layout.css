@@ -31,4 +31,18 @@
   &--column {
     flex-direction: column;
   }
+
+  &__title {
+    background: linear-gradient(to right, var(--orange), var(--orange-lighten));
+    color: white;
+    font-size: 2.6rem;
+    margin: 0 0 2.6rem;
+    text-align: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @media (min-width: 600px) {
+      font-size: 3.2rem;
+    }
+  }
 }
