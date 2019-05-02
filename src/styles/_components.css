@@ -167,3 +167,148 @@
     }
   }
 }
+
+.c-git-activity {
+  margin: 0 auto;
+}
+.c-git-user {
+  font-size: 2rem;
+  margin: 0 auto;
+  max-width: 96%;
+  text-align: center;
+
+  &__name {
+    display: none;
+  }
+  &__url {
+    display: inline-block;
+    font-size: 2.3rem;
+    line-height: 1.4;
+    overflow: hidden;
+    position: relative;
+    text-indent: 1.6em;
+    transition: width .5s ease-in;
+    width: 1.2em;
+
+    &:hover {
+      transition-timing-function: ease-out;
+      width: 6em;
+    }
+
+    &::before {
+      background-size: contain;
+      background: center center no-repeat url(/images/github.svg);
+      content: "";
+      display: inline-block;
+      height: 1.2em;
+      left: 0;
+      position: absolute;
+      top: 0.1em;
+      width: 1.2em;
+    }
+  }
+
+  @media (min-width: 768px) {
+    text-align: right;
+  }
+}
+.c-git-activity__repositories {
+  @media (min-width: 768px) {
+    align-items: flex-start;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+}
+.c-git-repository {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: 0.6rem solid var(--brand-color-alpha50);
+  font-size: 1.6rem;
+  margin: 2.5rem 5%;
+  padding: 3rem 3rem 3rem;
+  text-align: center;
+
+  & + & {
+    margin-top: 6rem;
+  }
+  &__name {
+    margin: 0 0 1.2em;
+    font-size: 1.6em;
+    font-weight: 400;
+    text-align: center;
+
+  }
+  &__link {
+    color: var(--yellow);
+  }
+  &__description {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: .8em 0 1.6em;
+  }
+  &__commits-all {
+    font-size: .9em;
+    text-transform: lowercase;
+    margin: 1.4em auto 0;
+    float: right;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 3rem !important;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 3rem !important;;
+    width: 44%;
+  }
+  @media (min-width: 1200px) {
+    font-size: 1.8rem;
+  }
+  @media (min-width: 1600px) {
+    width: 29.3%;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 1.9rem;
+
+  }
+}
+.c-git-activity__commits {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.2;
+
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+.c-git-commit {
+  position: relative;
+  text-align: left;
+  text-indent: .5em;
+  width: 100%;
+
+  &::before {
+    color: var(--yellow);
+    content: "•";
+    display: inline;
+    font-size: 2.4em;
+    left: -.4em;
+    position: absolute;
+    top: -.45em;
+    vertical-align: middle;
+  }
+
+  & + & {
+    margin-top: .4em;
+  }
+  &__message {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

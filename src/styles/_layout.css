@@ -29,6 +29,7 @@
 /* Contenedor de secciones. */
 .l-section {
   &--fullsize {
+    padding: 15vh 0;
     min-height: 100vh;
     width: 100%;
   }

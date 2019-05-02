@@ -7,8 +7,6 @@
 
 /* Links. */
 .l-links {
-  padding: 0 0 20vh;
-
   &__title {
     margin: 0 0 4rem;
   }
@@ -30,5 +28,12 @@ body.ce-fallback {
     &__button {
       display: none;
     }
+  }
+}
+
+/* Github Activity */
+.l-github-activity {
+  #github-activity-root {
+    width: 100%;
   }
 }
