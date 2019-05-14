@@ -175,6 +175,11 @@
 
 .c-git-activity {
   margin: 0 auto;
+
+  &__loading {
+    text-align: center;
+    font-size: 1.8rem;
+  }
 }
 .c-git-user {
   font-size: 2rem;
