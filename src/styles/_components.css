@@ -109,6 +109,11 @@
     text-align: center;
     text-shadow: 0.5rem 1.2rem 0 rgba(0, 0, 0, 1);
 
+    &--filled::before {
+      background-color: white !important;
+      border-radius: 50%;
+      border: 1px solid white;
+    }
     &::after {
       background-color: white;
       content: "";

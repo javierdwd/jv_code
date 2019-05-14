@@ -15,12 +15,13 @@
 }
 *[href^="https://www.robinwieruch.de"]::before {
   background-image: url(https://www.robinwieruch.de/img/favicon/favicon.ico) !important;
-  background-color: white !important;
-  border-radius: 50%;
 }
 *[href^="https://blog.apollographql.com"]::before {
   background-image: url(https://cdn-images-1.medium.com/fit/c/60/60/1*h3E_KHKB9jNKTkXkhrY5gA.png) !important;
 }
 *[href^="https://andy-bell.design"]::before {
   background-image: url(https://hankchizljaw.imgix.net/favicon-32x32.png) !important;
+}
+*[href^="https://snipcart.com"]::before {
+  background-image: url(https://snipcart.com/images/favicons/favicon-32x32.png) !important;
 }
