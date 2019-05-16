@@ -33,7 +33,7 @@ class UsefulLink extends HTMLElement {
           display: block;
         }
       </style>
-      <a target="_blank"><slot></slot></a>
+      <a target="_blank" rel="noopener noreferrer"><slot></slot></a>
     `;
 
     const anchor = this.shadowRoot.querySelector('a');
