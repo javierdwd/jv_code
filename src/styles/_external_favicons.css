@@ -25,3 +25,6 @@
 *[href^="https://snipcart.com"]::before {
   background-image: url(https://snipcart.com/images/favicons/favicon-32x32.png) !important;
 }
+*[href^="https://medium.freecodecamp.org"]::before {
+  background-image: url(https://cdn-images-1.medium.com/fit/c/60/60/1*MotlWcSa2n6FrOx3ul89kw.png) !important;
+}
