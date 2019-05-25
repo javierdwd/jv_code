@@ -162,13 +162,16 @@
       background: center center no-repeat url(/images/icons/external_link_icon.svg);
       background-size: contain;
       color: var(--yellow);
-      content: "";
-      display: inline-block;
+      display: none;
       height: 0.8em;
       left: 0;
       position: absolute;
       top: 0.3em;
       width: 0.8em;
+    }
+    &[data-active="1"]::before {
+      content: "";
+      display: inline-block;
     }
   }
 }

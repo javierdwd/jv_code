@@ -89,6 +89,10 @@ class CompactList extends HTMLElement {
                      .children[0]
                      .assignedElements();
 
+    this.elems.forEach(el => {
+      el.setAttribute('data-active', '0');
+    });
+
     this.offset = 0;
     this.size = parseInt(this.getAttribute('size')) || 4;
     this.button = this.querySelector('button');
@@ -113,9 +117,11 @@ class CompactList extends HTMLElement {
     this.elems.forEach((el, index) => {
       if(index < initOffset) {
         el.style.display = 'none';
+        el.setAttribute('data-active', '0');
       } else {
         if(index < limit) {
           el.style.display = 'block';
+          el.setAttribute('data-active', '1');
         } else {
           if(index === limit) {
             this.offset = limit;
