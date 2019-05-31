@@ -133,8 +133,8 @@
       text-align: left;
 
       &::after {
-        left: 0;
-        transform: none;
+        left: 0.4rem;
+        transform: translateX(50%);
       }
     }
   }
