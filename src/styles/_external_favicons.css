@@ -28,3 +28,25 @@
 *[href^="https://medium.freecodecamp.org"]::before {
   background-image: url(https://cdn-images-1.medium.com/fit/c/60/60/1*MotlWcSa2n6FrOx3ul89kw.png) !important;
 }
+*[href^="https://dev.to"]::before {
+  background-image: url(https://practicaldev-herokuapp-com.freetls.fastly.net/assets/favicon-bca01e42dfbe772972ebe01e7150cdb8b75555c612b20b7e3059a10e0ca6f759.ico) !important;
+}
+*[href^="https://javascript.info"]::before {
+  background-image: url(https://javascript.info/img/favicon/favicon.png) !important;
+}
+*[href^="https://blog.bitsrc.io"]::before {
+  background-image: url(https://cdn-images-1.medium.com/fit/c/40/40/1*qXDxf0QfJTyPbPO2ZgL7Xw@2x.png) !important;
+}
+*[href^="https://addyosmani.com"]::before {
+  background-image: url(https://addyosmani.com/assets/images/favicons/favicon-32x32.png) !important;
+}
+*[href^="https://medium.com"]::before {
+  background-image: url(/images/icons/medium.svg) !important;
+  background-size: 104% auto !important;
+}
+*[href^="https://egghead.io"]::before {
+  background-image: url(https://egghead.io/assets/apple-touch-icon-0c8b8020535cd5b922eabf1c3dbf5a73fe35273a613cb3aa27e651ac9fdeff38.png) !important;
+}
+*[href^="https://www.vojtechruzicka.com"]::before {
+  background-image: url(https://www.vojtechruzicka.com/favicons/favicon.png) !important;
+}
