@@ -109,11 +109,6 @@
     text-align: center;
     text-shadow: 0.5rem 1.2rem 0 rgba(0, 0, 0, 1);
 
-    &--filled::before {
-      background-color: white !important;
-      border-radius: 50%;
-      border: 1px solid white;
-    }
     &::after {
       background-color: white;
       content: "";
@@ -150,29 +145,6 @@
     margin-right: auto;
     margin-top: 1.8em;
     max-width: 200px;
-  }
-
-  /*
-  * External Favicons.
-  */
-  &__link[href] {
-    text-indent: 1.2em;
-
-    &::before {
-      background: center center no-repeat url(/images/icons/external_link_icon.svg);
-      background-size: contain;
-      color: var(--yellow);
-      display: none;
-      height: 0.8em;
-      left: 0;
-      position: absolute;
-      top: 0.3em;
-      width: 0.8em;
-    }
-    &[data-active="1"]::before {
-      content: "";
-      display: inline-block;
-    }
   }
 }
 
