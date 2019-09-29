@@ -1,6 +1,9 @@
 :root {
   font-size: 62.5%;
 
+  --font-primary: 'Karla', sans-serif;
+  --font-secondary: 'Share Tech Mono', monospace;
+
   --brand-color: #0755A3;
   --brand-color-alpha50: #0755A380;
   --brand-color-darken: #033565;

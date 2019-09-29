@@ -50,17 +50,17 @@
   --transition-time: .5s;
 
   background-color: white;
-  border: 0;
   border-radius: 0.4rem;
+  border: 0;
   color: var(--brand-color);
   cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-secondary);
   font-size: 1.4em;
-  font-weight: 500;
   height: 2em;
   line-height: 1;
   overflow: hidden;
   padding: 0 .8em;
+  text-shadow: 0px 0px var(--brand-color);
   transition: all var(--transition-time);
 
   &:disabled {
@@ -86,7 +86,7 @@
 .c-good-links {
   background-color: rgba(0, 0, 0, 0.2);
   border: 0.6rem solid var(--brand-color-alpha50);
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-secondary);
   font-size: 1rem;
   max-width: 800px;
   min-width: 320px;
@@ -192,7 +192,12 @@
 
   &__name {
     display: none;
+    font-family: var(--font-secondary);
   }
+  &__login {
+    font-family: var(--font-secondary);
+  }
+
   &__url {
     display: inline-block;
     font-size: 2.3rem;
@@ -200,12 +205,12 @@
     overflow: hidden;
     position: relative;
     text-indent: 1.6em;
-    transition: width .5s ease-in;
+    transition: width .4s ease-in;
     width: 1.2em;
 
     &:hover {
       transition-timing-function: ease-out;
-      width: 6em;
+      width: 6.4em;
     }
 
     &::before {
@@ -255,12 +260,12 @@
     color: var(--yellow);
   }
   &__description {
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-style: italic;
+    font-family: var(--font-secondary);
     font-size: 1.2em;
-    font-weight: 500;
+    font-style: italic;
     margin: .8em 0 1.6em;
+    text-align: center;
+    text-shadow: 0px 0px var(--brand-color);
   }
   &__commits-all {
     font-size: .9em;
@@ -288,8 +293,7 @@
   }
 }
 .c-git-activity__commits {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
+  font-family: var(--font-secondary);
   font-size: 1em;
   line-height: 1.2;
 
@@ -302,7 +306,7 @@
 .c-git-commit {
   position: relative;
   text-align: left;
-  text-indent: .5em;
+  text-indent: .55em;
   width: 100%;
 
   &::before {
@@ -310,9 +314,9 @@
     content: "•";
     display: inline;
     font-size: 2.4em;
-    left: -.4em;
+    left: -.55em;
     position: absolute;
-    top: -.45em;
+    top: -.35em;
     vertical-align: middle;
   }
 
