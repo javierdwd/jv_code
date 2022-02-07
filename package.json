@@ -5,9 +5,7 @@
   "main": "index.html",
   "scripts": {
     "dev": "parcel serve src/index.html",
-    "prebuild": "rm -rf ../jv-code",
-    "build": "parcel build src/index.html --public-url=/jv-code --out-dir ../jv-code --no-cache",
-    "postbuild": "cp ../jv-code/index.html ../index.html"
+    "build": "parcel build src/index.html --no-cache"
   },
   "repository": {
     "type": "git",
