@@ -1,4 +1,5 @@
 import Profile from "./components/Profile"
+import Links from "./components/Links"
 
 export function App() {
   return (
@@ -6,7 +7,7 @@ export function App() {
       <main class="l-content">
         <Profile />
 
-        {/* <module href="/links.html"></module> */}
+        <Links />
 
         {/* <module href="/github_activity.html"></module> */}
       </main>
