@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "Personal website",
   "main": "index.html",
-  "scripts": {
-    "dev": "parcel serve src/index.html",
-    "build": "parcel build src/index.html --no-cache"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/javierdwd/jv_code.git"
@@ -18,14 +15,6 @@
   },
   "homepage": "https://github.com/javierdwd/jv_code#readme",
   "dependencies": {
-    "jv_code_github_activity": "github:javierdwd/jv_code_github_activity#master",
-    "parcel-bundler": "^1.12.5",
-    "react": "16.8.6",
-    "react-dom": "16.8.6"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.2",
-    "postcss-nested": "^5.0.6",
-    "posthtml-modules": "0.4.2"
+    "jv_code_github_activity": "github:javierdwd/jv_code_github_activity#master"
   }
 }
