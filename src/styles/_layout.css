@@ -1,9 +1,10 @@
 /* Contenedor General (Justo dentro del Body). */
 .l-page-wrapper {
   background-color: black;
+  min-height: 100vh;
 
   &::before {
-    background: transparent url("/images/page_bg--colored.jpg") no-repeat center center;
+    background: transparent url("../images/page_bg--colored.jpg") no-repeat center center;
     background-size: cover;
     content: "";
     display: block;
@@ -49,6 +50,7 @@
     margin: 0 0 2.6rem;
     text-align: center;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 
     @media (min-width: 600px) {

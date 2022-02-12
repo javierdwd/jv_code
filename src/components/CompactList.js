@@ -1,4 +1,3 @@
-// <useful-link>
 class UsefulLink extends HTMLElement {
   constructor() {
     super();
@@ -45,12 +44,8 @@ class UsefulLink extends HTMLElement {
   }
 }
 
-if(window.customElements) {
-  customElements.define('useful-link', UsefulLink);
-}
-
 // <compact-list>
-class CompactList extends HTMLElement {
+export default class CompactList extends HTMLElement {
   constructor() {
     super();
 
@@ -137,5 +132,6 @@ class CompactList extends HTMLElement {
 }
 
 if(window.customElements) {
+  customElements.define('useful-link', UsefulLink);
   customElements.define('compact-list', CompactList);
 }

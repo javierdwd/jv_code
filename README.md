@@ -1,2 +1,2 @@
 # jv_code
-Personal website. [jv-code.xyz](https://jv-code.xyz)
+Personal website. [javiervb.com](https://javiervb.com)
