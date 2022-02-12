@@ -1,5 +1,6 @@
 import Profile from "./components/Profile"
 import Links from "./components/Links"
+import GitHubActivity from "./components/GitHubActivity"
 
 export function App() {
   return (
@@ -9,7 +10,7 @@ export function App() {
 
         <Links />
 
-        {/* <module href="/github_activity.html"></module> */}
+        <GitHubActivity />
       </main>
     </div>
   );

@@ -18,11 +18,13 @@
   },
   "homepage": "https://github.com/javierdwd/jv_code#readme",
   "dependencies": {
+    "babel-runtime": "^6.26.0",
     "jv_code_github_activity": "github:javierdwd/jv_code_github_activity#master",
     "preact": "^10.5.15"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.1.5",
+    "@types/react": "^17.0.39",
     "postcss-nested": "^5.0.6",
     "typescript": "^4.5.4",
     "vite": "^2.8.0"
