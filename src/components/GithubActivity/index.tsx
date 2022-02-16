@@ -1,7 +1,7 @@
-import { useLayoutEffect, useState } from "react";
-import GithubActivity from "jv_code_github_activity";
+import { useLayoutEffect, useState } from "preact/hooks";
+import GithubActivity from "./components/GitHubActivity";
 
-export default function GitHubActivity() {
+export default function GitHubActivityContainer() {
   const [showWidget, setShowWidget] = useState(false);
 
   useLayoutEffect(() => {
@@ -41,7 +41,7 @@ export default function GitHubActivity() {
 
       <div id="github-activity-root">
         {showWidget && (
-          <GithubActivity login="javierdwd" />
+          <GithubActivity />
         )}
       </div>
     </section>

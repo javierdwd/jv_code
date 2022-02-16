@@ -1,8 +1,8 @@
-import { useLayoutEffect } from "react"
+import { useLayoutEffect } from "preact/hooks"
 
 import Profile from "./components/Profile"
 import Links from "./components/Links"
-import GitHubActivity from "./components/GitHubActivity"
+import GitHubActivity from "./components/GithubActivity"
 
 export function App() {
   useLayoutEffect(() => {
