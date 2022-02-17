@@ -24,6 +24,7 @@
 /* Contenedor del contenido principal. Se pueden sumar .l-header o .l-footer. */
 .l-content {
   position: relative;
+  padding-bottom: 3vh;
   z-index: 10;
 }
 

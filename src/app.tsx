@@ -39,7 +39,7 @@ export function App() {
 
         <Links />
 
-        <GitHubActivity />
+        {/* <GitHubActivity /> */}
       </main>
     </div>
   );
