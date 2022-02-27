@@ -49,6 +49,7 @@ export default class CompactList extends HTMLElement {
   constructor() {
     super();
 
+    this.list;
     this.button;
     this.elems;
     this.offset;
@@ -74,32 +75,36 @@ export default class CompactList extends HTMLElement {
         }
       </style>
       <div id="compact-list">
-        <slot></slot>
+        <slot name="list-item"></slot>
       </div>
 
-      <slot name="more"></slot>
+      <slot name="next"></slot>
     `;
 
-    this.elems = this.shadowRoot.getElementById('compact-list')
-                     .children[0]
-                     .assignedElements();
-
-    this.elems.forEach(el => {
-      el.setAttribute('data-active', '0');
-    });
-
+    this.list = this.shadowRoot.querySelector('slot[name="list-item"]');
     this.offset = 0;
     this.size = parseInt(this.getAttribute('size')) || 4;
     this.button = this.querySelector('button');
 
     if(!this.button) {
       this.button = document.createElement('button');
-      this.button.innerText = 'More';
+      this.button.innerText = 'Next';
       this.shadowRoot.children[2].appendChild(this.button);
     }
     this.button.addEventListener('click', this.showElements)
 
-    this.showElements();
+    if(
+      !this.list.assignedElements().length ||
+      !this.list.assignedElements().length === this.size
+    ) {
+      this.button.setAttribute('disabled', '');
+    }
+
+    this.list.addEventListener('slotchange', () => {
+      this.elems = this.list.assignedElements();
+
+      this.showElements();
+    });
   }
 
   showElements() {
@@ -127,6 +132,8 @@ export default class CompactList extends HTMLElement {
 
     if(limit === this.elems.length) {
       this.button.setAttribute('disabled', '');
+    } else {
+      this.button.removeAttribute('disabled');
     }
   }
 }

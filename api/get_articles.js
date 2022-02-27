@@ -7,7 +7,7 @@ export default function handler(_, response) {
   const data = JSON.stringify({
     consumer_key: process.env.POCKET_CONSUMER_KEY,
     access_token: process.env.POCKET_ACCESS_TOKEN,
-    tag: "sport",
+    tag: "catchedmyattention",
     sort: "newest"
   });
 
@@ -33,12 +33,18 @@ export default function handler(_, response) {
           message: "Unexpected GetPocket's response error",
         });
       } else {
-        response.status(200).json(Object.values(jsonResponse.list).map(el => ({
-          item_id: el.item_id,
-          url: el.given_url || el.resolved_urls,
-          title: el.given_title || el.resolved_title,
-          added: el.time_added,
-        })));
+        const mappedResponse = Object
+                                .values(jsonResponse.list)
+                                .sort((a, b) => a.sort_id < b.sort_id ? -1 : 1)
+                                .map(el => ({
+                                  item_id: el.item_id,
+                                  url: el.given_url || el.resolved_urls,
+                                  title: el.given_title || el.resolved_title,
+                                  added: new Date(Number(el.time_added) * 1000),
+                                }));
+
+        response.setHeader('Cache-Control', 'max-age=86400');
+        response.status(200).json(mappedResponse);
       }
     })
   });

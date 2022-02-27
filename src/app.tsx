@@ -2,7 +2,7 @@ import { useLayoutEffect } from "preact/hooks"
 
 import Profile from "./components/Profile"
 import Links from "./components/Links"
-import GitHubActivity from "./components/GithubActivity"
+// import GitHubActivity from "./components/GithubActivity"
 
 export function App() {
   useLayoutEffect(() => {
