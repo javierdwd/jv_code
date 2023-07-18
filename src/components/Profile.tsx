@@ -1,4 +1,5 @@
-import ImageAvatar from "../images/avatar.jpg";
+// import ImageAvatar from "../images/avatar.jpg";
+import ImageAvatar from "../images/avatar2.png";
 import ImageGithub from "../images/github.svg";
 import ImageLinkedIn from "../images/linkedin.svg";
 

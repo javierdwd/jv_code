@@ -3,6 +3,7 @@
   border: 6px solid white;
   height: 250px;
   width: 250px;
+  background-color: var(--grey);
 }
 
 .c-link {
