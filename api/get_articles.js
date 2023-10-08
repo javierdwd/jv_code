@@ -1,7 +1,6 @@
 const https = require('https')
 
-
-export default function handler(_, response) {
+exports.default = function handler(_, response) {
   let responseRaw = '';
 
   const data = JSON.stringify({
@@ -10,6 +9,7 @@ export default function handler(_, response) {
     tag: "catchedmyattention",
     sort: "newest"
   });
+
 
   const req = https.request({
     hostname: 'getpocket.com',

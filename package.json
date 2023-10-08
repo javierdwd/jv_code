@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Personal website",
   "scripts": {
-    "dev": "vite ./",
-    "build": "tsc && vite build",
+    "dev": "vite --port $PORT",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "repository": {
@@ -18,7 +18,11 @@
   },
   "homepage": "https://github.com/javierdwd/jv_code#readme",
   "dependencies": {
-    "preact": "10.18.1"
+    "preact": "10.18.1",
+    "yarn": "^1.22.19"
+  },
+  "peerDependencies": {
+    "vercel": "^32.4.1"
   },
   "devDependencies": {
     "@preact/preset-vite": "2.5.0",
