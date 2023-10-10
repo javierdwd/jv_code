@@ -4,9 +4,11 @@ import Profile from "./components/Profile"
 import Links from "./components/Links"
 // import GitHubActivity from "./components/GithubActivity"
 
+import { Analytics } from '@vercel/analytics/react';
+
 export function App() {
   useLayoutEffect(() => {
-    let scrollTimer: number;
+    let scrollTimer: ReturnType<typeof setTimeout>;
     let pageWrapper = document.querySelector('.l-page-wrapper');
 
     window.addEventListener('scroll', () => {
@@ -41,6 +43,8 @@ export function App() {
 
         {/* <GitHubActivity /> */}
       </main>
+
+      <Analytics />
     </div>
   );
 }
