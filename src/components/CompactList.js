@@ -63,7 +63,7 @@ export default class CompactList extends HTMLElement {
   connectedCallback() {
     this.shadowRoot.innerHTML = `
       <style>
-        ::slotted(*) {
+        ::slotted(div) {
           display: block;
         }
         ::slotted(*[hidden]) {
@@ -134,12 +134,6 @@ export default class CompactList extends HTMLElement {
   }
 
   showElements(fromIndex, toIndex) { // Zero-indexes
-    console.log({
-      fromIndex,
-      toIndex,
-      elemsLength: this.elems.length
-    });
-
     this.elems.forEach((el, index) => {
       if(index >= fromIndex && index <= toIndex ) {
         el.removeAttribute('hidden', '');

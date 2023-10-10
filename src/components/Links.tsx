@@ -55,10 +55,8 @@ export default function Link() {
           </useful-link>
         ))}
 
-        {/* <div className="c-good-link__buttons-wrapper">
-        </div> */}
-          <button slot="newer" class="c-good-links__button c-btn c-btn--animated">&lt;&lt;</button>
-          <button slot="older" class="c-good-links__button c-btn c-btn--animated">previous</button>
+        <button slot="newer" class="c-good-links__button c-btn c-btn--animated">&lt;&lt;</button>
+        <button slot="older" class="c-good-links__button c-btn c-btn--animated">previous</button>
       </compact-list>
     </section>
   );

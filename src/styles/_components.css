@@ -162,8 +162,9 @@
     }
   }
   & .c-skeleton {
-    height: 2.6rem;
-    margin: 3.6rem 0;
+    display: block;
+    height: 2.2rem;
+    margin: 3.2rem 0;
   }
 }
 
