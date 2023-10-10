@@ -25,7 +25,7 @@
     transition: all .4s ease;
     vertical-align: middle;
 
-    &:hover {
+    &:hover:not(:disabled) {
       animation-duration: .8s;
       animation-iteration-count: infinite;
       animation-name: animation__shadow-hover;
@@ -65,9 +65,7 @@
   transition: all var(--transition-time);
 
   &:disabled {
-    height: 0;
-    margin-top: 0;
-    opacity: 0;
+    pointer-events: none;
   }
 
   &--block {
@@ -133,8 +131,21 @@
         transform: translateX(50%);
       }
     }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.6em;
+      padding: 0.08em 0.4em;
+      background-color: var(--orange-lighten);
+      color: white;
+      font-weight: 400;
+      border-radius: .4em;
+      margin-left: .4em;
+      text-shadow: none;
+      vertical-align: middle;
+    }
   }
-  &__link[style*="display: block"] + &__link[style*="display: block"] {
+  &__link:not([hidden]) + &__link:not([hidden]) {
     margin-top: 3.6rem;
 
     &::after {
@@ -142,10 +153,13 @@
     }
   }
   &__button {
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 1.8em;
     max-width: 200px;
+    display: inline-block;
+
+    &:disabled {
+      display: none;
+    }
   }
   & .c-skeleton {
     height: 2.6rem;

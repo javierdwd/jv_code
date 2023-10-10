@@ -64,6 +64,9 @@ export default class CompactList extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <style>
         ::slotted(*) {
+          display: block;
+        }
+        ::slotted(*[hidden]) {
           display: none;
         }
         ::slotted(button) {
@@ -78,63 +81,76 @@ export default class CompactList extends HTMLElement {
         <slot name="list-item"></slot>
       </div>
 
-      <slot name="next"></slot>
+      <slot name="newer"></slot>
+      <slot name="older"></slot>
     `;
 
     this.list = this.shadowRoot.querySelector('slot[name="list-item"]');
     this.offset = 0;
     this.size = parseInt(this.getAttribute('size')) || 4;
-    this.button = this.querySelector('button');
+    this.sizeZeroIndex = this.size - 1;
 
-    if(!this.button) {
-      this.button = document.createElement('button');
-      this.button.innerText = 'Next';
-      this.shadowRoot.children[2].appendChild(this.button);
-    }
-    this.button.addEventListener('click', this.showElements)
+    this.buttonNewer = this.querySelector('button[slot="newer"]');
+    this.buttonOlder = this.querySelector('button[slot="older"]');
 
-    if(
-      !this.list.assignedElements().length ||
-      !this.list.assignedElements().length === this.size
-    ) {
-      this.button.setAttribute('disabled', '');
-    }
+    this.buttonNewer?.addEventListener('click', this.loadNewerElements.bind(this))
+    this.buttonOlder?.addEventListener('click', this.loadOlderElements.bind(this))
+
 
     this.list.addEventListener('slotchange', () => {
       this.elems = this.list.assignedElements();
 
-      this.showElements();
+      this.showElements(this.offset, this.sizeZeroIndex);
+      this.updateButtonStatus();
     });
   }
 
-  showElements() {
-    let initOffset = this.offset || 0;
-    let limit = initOffset + this.size;
+  loadNewerElements() {
+    this.showElements(
+      Math.max(this.offset - this.sizeZeroIndex,  0), // fromIndex
+      this.offset // toIndex
+    )
+  }
 
-    if(limit > this.elems.length) {
-      limit = this.elems.length;
+  loadOlderElements() {
+    this.showElements(
+      this.offset + this.sizeZeroIndex, // fromIndex
+      Math.min(this.offset + this.sizeZeroIndex * 2, (this.elems.length - 1)) // toIndex
+    );
+  }
+
+  updateButtonStatus() {
+    if((this.offset + this.size) < this.elems.length) {
+      this.buttonOlder?.removeAttribute('disabled', '')
+    } else {
+      this.buttonOlder?.setAttribute('disabled', '')
     }
+
+    if(this.offset > 0) {
+      this.buttonNewer?.removeAttribute('disabled', '')
+    } else {
+      this.buttonNewer?.setAttribute('disabled', '')
+    }
+  }
+
+  showElements(fromIndex, toIndex) { // Zero-indexes
+    console.log({
+      fromIndex,
+      toIndex,
+      elemsLength: this.elems.length
+    });
+
     this.elems.forEach((el, index) => {
-      if(index < initOffset) {
-        el.style.display = 'none';
-        el.setAttribute('data-active', '0');
+      if(index >= fromIndex && index <= toIndex ) {
+        el.removeAttribute('hidden', '');
       } else {
-        if(index < limit) {
-          el.style.display = 'block';
-          el.setAttribute('data-active', '1');
-        } else {
-          if(index === limit) {
-            this.offset = limit;
-          }
-        }
+        el.setAttribute('hidden', '');
       }
     });
 
-    if(limit === this.elems.length) {
-      this.button.setAttribute('disabled', '');
-    } else {
-      this.button.removeAttribute('disabled');
-    }
+    this.offset = fromIndex
+
+    this.updateButtonStatus()
   }
 }
 

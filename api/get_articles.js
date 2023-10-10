@@ -7,7 +7,8 @@ exports.default = function handler(_, response) {
     consumer_key: process.env.POCKET_CONSUMER_KEY,
     access_token: process.env.POCKET_ACCESS_TOKEN,
     tag: "catchedmyattention",
-    sort: "newest"
+    sort: "newest",
+    detailType: "complete"
   });
 
 
@@ -41,6 +42,7 @@ exports.default = function handler(_, response) {
                                   url: el.given_url || el.resolved_urls,
                                   title: el.given_title || el.resolved_title,
                                   added: new Date(Number(el.time_added) * 1000),
+                                  tags: Object.keys(el.tags).filter(tag => tag !== 'catchedmyattention')
                                 }));
 
         response.setHeader('Cache-Control', 'max-age=86400');
