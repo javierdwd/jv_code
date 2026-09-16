@@ -4,7 +4,8 @@
   min-height: 100vh;
 
   &::before {
-    background: transparent url("../images/page_bg--colored.jpg") no-repeat center center;
+    background: transparent url("../images/page_bg--colored.jpg") no-repeat
+      center center;
     background-size: cover;
     content: "";
     display: block;
@@ -24,7 +25,6 @@
 /* Contenedor del contenido principal. Se pueden sumar .l-header o .l-footer. */
 .l-content {
   position: relative;
-  padding-bottom: 3vh;
   z-index: 10;
 }
 

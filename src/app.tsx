@@ -39,7 +39,7 @@ export function App() {
       <main class="l-content">
         <Profile />
 
-        <Links />
+        {/* <Links /> */}
 
         {/* <GitHubActivity /> */}
       </main>
